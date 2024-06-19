@@ -1,12 +1,11 @@
 package dev.quozul.sleep;
 
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.world.tick.TickManager;
 
 public class Freezer {
-    public static void freeze(int playerCount, TickManager tickManager) {
-        if (playerCount == 0) {
-            tickManager.setFrozen(true);
+    public static void freeze(MinecraftServer server) {
+        if (server.getPlayerManager().getCurrentPlayerCount() == 0) {
+            server.getTickManager().setFrozen(true);
             SleepFabric.LOGGER.info("Server is now frozen");
         }
     }

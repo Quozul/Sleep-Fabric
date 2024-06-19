@@ -3,7 +3,7 @@
   "package": "dev.quozul.sleep.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "ExampleMixin",
+    "MinecraftDedicatedServerMixin",
     "PlayerEventsMixin"
   ],
   "injectors": {
